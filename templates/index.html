@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>GreekAI</title>
+    <link rel="stylesheet" href="{%  static "assets/bootstrap/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap">
+    <link rel="stylesheet" href="{%  static "assets/css/Footer-Dark-icons.cs" %}s">
+    <link rel="stylesheet" href="{% static "assets/css/styles.css" %}">
+</head>
+
+<body>
+    <div class="main">
+        <nav class="navbar navbar-expand-md" id="navigation">
+            <div class="container-fluid"><a class="navbar-brand" href="#"><strong>Lasortida Studio</strong></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="navbar-nav text-end mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="#"><strong>GreekAI</strong></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><strong>Another</strong></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="header">
+            <h1>&nbsp;Neural network will guess your letter</h1>
+            <h4>Rate your skills in writing the Greek alphabet</h4>
+        </div>
+        <div id="photo"><img id="pythagor" src={% static "assets/img/2.png" %}></div>
+        <div>
+            <p>Paragraph</p>
+            <script src={% static "assets/js/canvas.js" %}></script>
+            <div class="CanvasContainer">
+                <canvas id="drawingCanvas" width="640" height="640"></canvas>
+                <h1 class="warn">Write a letter...</h1>
+            </div>
+            <div style="text-align: center; padding-top: 5%;">
+                     <img id="trash" onclick="clearCanvasButton()" src={% static "assets/img/icons8-trash.svg" %}>
+            </div>
+        </div>
+        <div id="bot">
+            <footer class="text-center">
+                <div class="container text-muted py-4 py-lg-5">
+                    <ul class="list-inline">
+                        <li class="list-inline-item me-4"><a class="link-secondary" href="#">Web design</a></li>
+                        <li class="list-inline-item me-4"><a class="link-secondary" href="#">Development</a></li>
+                        <li class="list-inline-item"><a class="link-secondary" href="#">Hosting</a></li>
+                    </ul>
+                    <p id="copyright" class="mb-0">Copyright © 2024 Brand</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src={% static "assets/bootstrap/js/bootstrap.min.js" %}></script>
+</body>
+
+</html>
