@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-+3n+icz00j728=*@li_cy=t^2so&7)f8q54j#-dqihf(25d&qi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['194.50.153.33']
+ALLOWED_HOSTS = ['localhost', 'lasortida.tech']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'start',
+    'greek_ai',
 ]
 
 MIDDLEWARE = [

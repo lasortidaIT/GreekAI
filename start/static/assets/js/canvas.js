@@ -2,10 +2,17 @@ var canvas;
 var context;
 var timeout_id;
 var url;
+
 window.onload = function() {
       canvas = document.getElementById("drawingCanvas");
+	  h1 = document.getElementById("answer");
       context = canvas.getContext("2d");
+
+	  context.fillStyle = '#000';
+	  context.fillRect(0, 0, 640, 640);
+
       context.lineWidth = 10;
+	  context.strokeStyle = '#fff'
 	  now = new Date();
 
       // Подключаем требуемые для рисования события
@@ -18,7 +25,7 @@ window.onload = function() {
 function startDrawing(e) {
 	// Начинаем рисовать
 	isDrawing = true;
-	clearTimeout(timeout_id);
+	// clearTimeout(timeout_id);
 
 	// Создаем новый путь (с текущим цветом и толщиной линии)
 	context.beginPath();
@@ -42,16 +49,24 @@ function draw(e) {
 
 function stopDrawing() {
     isDrawing = false;
-	timeout_id = setTimeout(clearCanvas, 2000);
+	// timeout_id = setTimeout(clearCanvas, 2000);
 }
 
 function saveData(){
-	var canvasData = canvas.toDataURL("image/png");
-	var ajax = new XMLHttpRequest();
-	ajax.open("POST",'http://localhost:8080/server.php',true);
-	ajax.setRequestHeader('Content-Type', 'application/upload');
-	ajax.send(canvasData);
-	context.clearRect(0, 0, canvas.width, canvas.height);
+	var canvasData = canvas.toDataURL('image/png');
+
+	fetch('/api/greek-ai', {
+           method: 'POST',
+           body: new URLSearchParams({
+               image: canvasData
+           })
+       })
+       .then(response => response.json())
+       .then(data => {
+           // Process the PIL Image received from the server
+           console.log(data.letter_code);
+		   h1.innerText = data.letter_code;
+       });
 }
 
 function clearCanvas() {
@@ -59,6 +74,9 @@ function clearCanvas() {
 }
 
 function clearCanvasButton() {
-	context.clearRect(0, 0, canvas.width, canvas.height);
-	clearTimeout(timeout_id);
+	// context.clearRect(0, 0, canvas.width, canvas.height);
+	//context.fillRect(0, 0, 640, 640);
+	//clearTimeout(timeout_id);
+	saveData();
+	context.fillRect(0, 0, 640, 640);
 }
