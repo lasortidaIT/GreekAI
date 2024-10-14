@@ -1,17 +1,15 @@
 from django.shortcuts import render
 from django.shortcuts import render
 import cv2
-from PIL import Image
 import numpy as np
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 import base64
-import requests
-import tensorflow as tf
+import keras
 from django.core.files.storage import FileSystemStorage
 
 
-model = tf.keras.models.load_model("ml/model.keras")
+model = keras.models.load_model("ml/model.keras")
 letters = ['Lalpha', 'Lbeta', 'Lgamma', 'Ldelta', 'Lepsilon', 'Lzeta', 'Leta', 'Ltheta', 'Liota', 'Lkappa',
                    'Llambda', 'Lmu', 'Lnu', 'Lxi', 'Lomicron', 'Lpi', 'Lrho', 'Lsigma', 'Ltau', 'Lupsilon', 'Lphi',
                    'Lchi', 'Lpsi', 'Lomega',
