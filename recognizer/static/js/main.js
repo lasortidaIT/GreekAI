@@ -3,13 +3,14 @@ let another = false;
 let canvasSize;
 let context;
 let canvas;
-
+let lineW;
 let predBox;
 let answer;
 let symbol;
 let val2;
 
-window.onload = function() {
+
+function start() {
     canvas = document.getElementById("canvas");
     predBox = document.getElementById("dummy");
     answer = document.getElementById("answer");
@@ -18,7 +19,7 @@ window.onload = function() {
     context = canvas.getContext("2d");
 
     canvasSize = Math.round(window.innerWidth * 0.4);
-    let lineW = Math.round(window.innerWidth * 0.007);
+    lineW = Math.round(window.innerWidth * 0.007);
     context.canvas.width = canvasSize;
     context.canvas.height = canvasSize;
 
@@ -34,6 +35,15 @@ window.onload = function() {
     canvas.addEventListener('touchmove', touchMove, false);
     canvas.addEventListener('touchend', touchEnd, false);
 }
+
+window.onload = function() {
+    start()
+}
+
+window.addEventListener("resize", function(event) {
+    start();
+    clearCanvas();
+})
 
 function startDrawing(e) {
     paint = true;

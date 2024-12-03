@@ -10,7 +10,7 @@ SECRET_KEY = 'django-insecure-fi!58dp=qikrxxw4xk^tjy7o8q2x(4z=!2lsva^&_hj$)&(da7
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '193.233.22.64']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '193.233.22.64', 'lasortida.tech']
 
 INSTALLED_APPS = [
     'django.contrib.auth',
