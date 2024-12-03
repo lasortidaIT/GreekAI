@@ -1,0 +1,193 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans'),
+       url('storage/fonts/OpenSans-Regular.ttf') format('truetype')
+}
+
+body {
+    background-color: #000;
+    margin: 1%;
+}
+
+.navigation {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation a {
+    float: left;
+    color: #fff;
+    text-align: center;
+    padding: 1vw 4vw;
+    text-decoration: none;
+    font-size: 2vw;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    color: #ff99be;
+}
+
+.navigation .active {
+    color: #ff99be;
+}
+
+.content {
+    background-color: #250936;
+    border-radius: 5px;
+    min-height: 100vh;
+}
+
+.content .image {
+    padding-top: 3%;
+    text-align: center;
+}
+
+.content .image .logo {
+    width: 35%;
+    height: 35%;
+    max-inline-size: 50%;
+    block-size: auto;
+}
+
+.title {
+    padding-top: 3%;
+    text-align: center;
+}
+
+.title h1 {
+    font-family: "Open Sans", monospace;
+    font-size: 3vw;
+    font-weight: bold;
+    color: #fff;
+}
+
+.title h2 {
+    font-family: "Open Sans", monospace;
+    font-size: 2vw;
+    font-weight: bold;
+    color: #ff99be;
+}
+
+.bar {
+    clear: both;
+    padding-top: 10%;
+    display: flex;
+}
+
+canvas {
+    width: 40vw;
+    height: 40vw;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 2px;
+    border-radius: 4%;
+    background: #000;
+    margin-left: 10%;
+    max-height: 40vw;
+    max-width: 40vw;
+}
+
+.hints {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.hints h1 {
+    font-family: "Open Sans", monospace;
+    color: #fff;
+    font-size: 2.5vw;
+}
+
+.prediction {
+    margin-top: 30%;
+    text-align: center;
+    border: #fff 2px solid;
+    border-radius: 3vw;
+    visibility: hidden;
+}
+
+.prediction h1 {
+    font-family: "Open Sans", monospace;
+    color: #fff;
+    font-size: 2vw;
+    font-weight: lighter;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.samples a {
+    font-family: monospace;
+    color: #ff99be;
+    font-size: 5vw;
+    margin-bottom: 2%;
+    text-decoration: none;
+    margin-top: 0;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 5%;
+}
+
+.clean {
+    text-align: center;
+    padding-top: 7%;
+}
+
+.clean a {
+    color: #fff;
+    font-family: "Open Sans", monospace;
+    font-size: 2vw;
+    text-decoration: none;
+    padding: 2% 10%;
+    background-color: #ff99be;
+    border-radius: 3vw;
+}
+
+.clean a:hover {
+    background-color: #ce6a8e;
+}
+
+.alphabet {
+    text-align: center;
+    padding-top: 8%;
+}
+
+.alphabet h1 {
+    font-family: "Open Sans", monospace;
+    color: #fff;
+    font-size: 2vw;
+}
+
+#letters {
+    font-family: monospace;
+    color: #ff99be;
+    font-size: 3vw;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 6%;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer a {
+    padding: 2%;
+    color: #fff;
+    font-family: "Open Sans", monospace;
+    font-size: 1vw;
+    font-weight: bold;
+}
+
+.footer .like {
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ff99be;
+}

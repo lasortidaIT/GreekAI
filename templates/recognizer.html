@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GreekAI</title>
+    <link rel="icon" href="{% static "img/favi.png" %}" type="image/x-icon">
+    <link rel="stylesheet" href="{%  static "css/main.css" %}">
+    <script src="{%  static "js/main.js" %}"></script>
+</head>
+<body>
+    <div class="navigation">
+        <a class="active" href="#">GreekAI</a>
+        <a href="api/greek-ai">API</a>
+    </div>
+    <div class="content">
+        <div class="image">
+            <img class="logo" src="{% static "img/logo.png" %}" alt="logo">
+        </div>
+        <div class="title">
+            <h1>Improve your skill of writing Greek letters</h1>
+            <h2>Neural network will rate your drawing</h2>
+        </div>
+        <div class="bar">
+            <canvas id="canvas"></canvas>
+            <div class="hints">
+                <h1 id="tip">Draw letter in box</h1>
+                <div id="dummy" class="prediction">
+                    <h1 id="answer">prediction</h1>
+                    <div class="samples">
+                        <a id="button_2">Σ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clean">
+            <a id="trash" onclick="clearCanvas()" href="#/">Clean  &nbsp;🗑️</a>
+        </div>
+        <div class="alphabet">
+            <h1>Greek Alphabet:</h1>
+            <h2 id="letters">Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω α β γ δ ε ζ η θ ι κ λ μ ν ξ ο π ρ ς σ τ υ φ χ ψ ω</h2>
+        </div>
+    </div>
+    <div class="footer">
+        <a class="like">✌️</a>
+        <a href="#">GitHub</a>
+        <a href="#">Rapid-API</a>
+        <a href="#">E-mail</a>
+        <a class="like">✌️</a>
+    </div>
+</body>
+</html>
