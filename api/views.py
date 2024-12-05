@@ -77,7 +77,7 @@ class UploadView(APIView):
             save = False
 
             if rate > 0.991:
-                cv2.imwrite(f'storage/data/{code}_{data["index"]}.png', image)
+                cv2.imwrite(f'storage/data/{code}_{data["index"]}.png', image * 255)
                 data['index'] += 1
                 save = True
 
