@@ -8,7 +8,7 @@ MODELS = os.path.join(BASE_DIR, 'storage/models')
 
 SECRET_KEY = 'django-insecure-fi!58dp=qikrxxw4xk^tjy7o8q2x(4z=!2lsva^&_hj$)&(da7'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '193.233.22.64', 'lasortida.tech']
 
